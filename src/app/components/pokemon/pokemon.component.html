@@ -1,0 +1,7 @@
+<div class="content">
+  <h1>{{ pokemon.name | titlecase }}</h1> <!-- titlecase es un tipo de PIPE, esto quiere decir que si el nombre es pikachu imprimira Pikachu | VER DOCUMENTACION -->
+  <hr>
+  <h2>Tipo <small>{{ pokemon.types[0].type.name | titlecase }}</small></h2>
+  <p><small>Haz click en la foto</small></p>
+  <img (click)="mostrar()" class="poke-photo" [src]="pokemon.sprites.front_default" alt="foto">
+</div>
